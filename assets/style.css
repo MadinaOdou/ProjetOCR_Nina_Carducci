@@ -68,13 +68,8 @@ body {
   z-index: 0;
 }
 
-footer .picture img {
-  width: 358.67px;
-  height: auto;
-}
-#about .picture img {
-  width: 385.58px;
-  height: auto;
+.picture img {
+  width: 100%;
 }
 #about-me {
   flex: 2;
@@ -269,8 +264,12 @@ input[type="submit"] {
     margin-bottom: 1em;
   }
 
-  #about-me p {
+  #about-me p:nth-of-type(1),
+  #about-me p:nth-of-type(2) {
     width: 100%;
+  }
+  .quote__text {
+    font-size: calc(1.375rem + 1.5vw);
   }
 }
 
@@ -330,6 +329,9 @@ input[type="submit"] {
     right: 0;
     z-index: -1;
   }
+  .quote__text {
+    font-size: calc(1.375rem + 1.5vw);
+  }
 }
 
 @media all and (max-width: 650px) {
@@ -367,5 +369,8 @@ input[type="submit"] {
   }
   .picture {
     width: 80%;
+  }
+  .quote__text {
+    font-size: calc(1.375rem + 1.5vw);
   }
 }
