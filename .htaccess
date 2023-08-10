@@ -6,6 +6,9 @@ BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
 # BEGIN Cache-Control Headers
 <IfModule mod_headers.c>
+<FilesMatch "\.(webp)$">
+  Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
 <FilesMatch "\.(ico|jpe?g|png|gif|swf|css|gz)$">
 Header set Cache-Control "max-age=2592000, public"
 </FilesMatch>
